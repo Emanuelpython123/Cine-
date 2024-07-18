@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia del Cine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            cursor: pointer;
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin: 0;
+        }
+        .section div {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Historia del Cine</h1>
+    </header>
+    <main>
+        <section class="section">
+            <h3 onclick="toggleSection(1)">Orígenes del Cine</h3>
+            <div id="section1">
+                <p>El cine comenzó a finales del siglo XIX con la invención del kinetoscopio por Thomas Edison y el cinematógrafo por los hermanos Lumière. Estas primeras películas eran cortometrajes de eventos cotidianos.</p>
+            </div>
+        </section>
+        <section class="section">
+            <h3 onclick="toggleSection(2)">La Era del Cine Mudo</h3>
+            <div id="section2">
+                <p>La era del cine mudo, que abarca desde finales de 1890 hasta finales de 1920, vio el ascenso de estrellas como Charlie Chaplin y la creación de clásicos como "El nacimiento de una nación" y "El acorazado Potemkin".</p>
+            </div>
+        </section>
+        <section class="section">
+            <h3 onclick="toggleSection(3)">La Introducción del Sonido</h3>
+            <div id="section3">
+                <p>La introducción del sonido en 1927 con "El cantante de jazz" cambió para siempre el cine. Las películas habladas se volvieron la norma y Hollywood se estableció como la capital del cine mundial.</p>
+            </div>
+        </section>
+        <section class="section">
+            <h3 onclick="toggleSection(4)">El Cine Moderno</h3>
+            <div id="section4">
+                <p>Desde la década de 1960 hasta el presente, el cine ha visto una increíble variedad de géneros y estilos. Directores como Steven Spielberg, Martin Scorsese y Quentin Tarantino han redefinido lo que puede ser el cine.</p>
+            </div>
+        </section>
+        <h2>Galería de Imágenes</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/150" alt="Imagen 1">
+            <img src="https://via.placeholder.com/150" alt="Imagen 2">
+            <img src="https://via.placeholder.com/150" alt="Imagen 3">
+        </div>
+    </main>
+    <script>
+        function toggleSection(sectionNumber) {
+            var section = document.getElementById('section' + sectionNumber);
+            if (section.style.display === 'block') {
+                section.style.display = 'none';
+            } else {
+                section.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
